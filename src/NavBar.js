@@ -21,7 +21,9 @@ const NavBar = () => {
         ></img>
       </nav>
       <div
-        className={`sm:hidden bg-[#070724] ${ham ? "hidden" : "flex flex-col"}`}
+        className={`sm:hidden bg-[#070724] ${
+          ham ? "hidden" : "flex flex-col"
+        } absolute top-16 w-[100%]`}
       >
         {data.map((item, index) => (
           <div
@@ -68,7 +70,7 @@ const NavBar = () => {
           {data.map((item, index) => (
             <p
               key={index}
-              className="text-white font-spartan cursor-pointer uppercase opacity-80 font-semibold"
+              className="text-white font-spartan cursor-pointer uppercase opacity-80 hover:opacity-100 font-semibold"
             >
               {item.name}
             </p>

@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         spartan: ["League Spartan", "sans - serif"],
-        antonio: ["League Spartan", "sans-serif"],
+        antonio: ["Antonio", "sans-serif"],
       },
       backgroundImage: {
         "star-pattern": "url('src/assets/background-stars.svg')",

@@ -1,13 +1,14 @@
 import data from "./data.json";
 import { useState } from "react";
 import NavBar from "./NavBar";
-import stars from "./assets/background-stars.svg";
+import PlanetMob from "./PlanetMob";
 
 function App() {
   return (
     <>
       <div className="App">
         <NavBar />
+        <PlanetMob />
       </div>
     </>
   );
