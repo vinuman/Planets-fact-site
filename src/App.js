@@ -1,7 +1,10 @@
+import React from "react";
 import data from "./data.json";
-import { useState } from "react";
+import { useRef, useEffect, useContext } from "react";
 import NavBar from "./NavBar";
 import PlanetMob from "./PlanetMob";
+
+export const UserContext = React.createContext();
 
 function App() {
   return (

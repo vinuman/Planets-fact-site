@@ -2,10 +2,14 @@ import React from "react";
 import hamburger from "./assets/icon-hamburger.svg";
 import data from "./data.json";
 import arrow from "./assets/icon-chevron.svg";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useDispatch } from "react-redux";
+import { selectPlanet } from "./features/selectSlice";
 
 const NavBar = () => {
   const [ham, setHam] = useState(true);
+  const dispatch = useDispatch();
+
   return (
     <>
       {/* Mobile div */}
@@ -27,6 +31,10 @@ const NavBar = () => {
       >
         {data.map((item, index) => (
           <div
+            onClick={() => {
+              dispatch(selectPlanet(index));
+              setHam(true);
+            }}
             key={index}
             className="flex justify-between p-4 cursor-pointer border-b-[1px] border-[#141430]"
           >
