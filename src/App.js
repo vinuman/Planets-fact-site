@@ -1,8 +1,7 @@
 import React from "react";
-import data from "./data.json";
-import { useRef, useEffect, useContext } from "react";
 import NavBar from "./NavBar";
 import PlanetMob from "./PlanetMob";
+import Planet from "./Planet";
 
 export const UserContext = React.createContext();
 
@@ -12,6 +11,7 @@ function App() {
       <div className="App">
         <NavBar />
         <PlanetMob />
+        <Planet />
       </div>
     </>
   );

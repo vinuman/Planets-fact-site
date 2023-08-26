@@ -134,7 +134,11 @@ const PlanetMob = () => {
             {filteredPlanet[0].name}
           </h1>
           <p className="text-white font-spartan text-center text-[16px] opacity-80">
-            {filteredPlanet[0].overview.content}
+            {overView
+              ? filteredPlanet[0].overview.content
+              : structure
+              ? filteredPlanet[0].structure.content
+              : filteredPlanet[0].geology.content}
           </p>
         </div>
         <div className="flex flex-col justify-center items-center  py-8 ">

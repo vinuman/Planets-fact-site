@@ -27,7 +27,7 @@ const NavBar = () => {
       <div
         className={`sm:hidden bg-[#070724] ${
           ham ? "hidden" : "flex flex-col"
-        } absolute top-16 w-[100%]`}
+        } absolute top-16 w-[100%] z-20`}
       >
         {data.map((item, index) => (
           <div
@@ -77,6 +77,9 @@ const NavBar = () => {
         <div className="flex justify-around p-4  sm:w-[90%] lg:w-[60%]">
           {data.map((item, index) => (
             <p
+              onClick={() => {
+                dispatch(selectPlanet(index));
+              }}
               key={index}
               className="text-white font-spartan cursor-pointer uppercase opacity-80 hover:opacity-100 font-semibold"
             >
