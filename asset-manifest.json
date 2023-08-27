@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Planets-fact-site/static/css/main.2526e00a.css",
+    "main.js": "/Planets-fact-site/static/js/main.d988c072.js",
+    "index.html": "/Planets-fact-site/index.html",
+    "static/media/icon-hamburger.svg": "/Planets-fact-site/static/media/icon-hamburger.05a40a49142005f6faf230286ab38214.svg",
+    "static/media/icon-chevron.svg": "/Planets-fact-site/static/media/icon-chevron.8915cee97f993fb990aac66c578ad575.svg",
+    "main.2526e00a.css.map": "/Planets-fact-site/static/css/main.2526e00a.css.map",
+    "main.d988c072.js.map": "/Planets-fact-site/static/js/main.d988c072.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2526e00a.css",
+    "static/js/main.d988c072.js"
+  ]
+}
