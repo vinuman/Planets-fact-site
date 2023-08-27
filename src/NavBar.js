@@ -70,11 +70,11 @@ const NavBar = () => {
 
       {/* TAB AND DESKTOP DIV */}
 
-      <nav className=" px-8 py-4  sm:flex-col lg:flex-row lg:justify-between items-center bg-[#070724] hidden sm:flex ">
+      <nav className=" px-8 py-4  sm:flex-col lg:flex-row lg:justify-between items-center bg-[#070724] hidden sm:flex lg:px-16 ">
         <h1 className=" font-antonio text-[36px] font-semibold text-white uppercase">
           The planets
         </h1>
-        <div className="flex justify-around p-4  sm:w-[90%] lg:w-[60%]">
+        <div className="flex justify-around p-4  sm:w-[100%] lg:w-[80%] ">
           {data.map((item, index) => (
             <p
               onClick={() => {

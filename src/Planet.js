@@ -15,8 +15,8 @@ const Planet = () => {
   console.log(color);
   return (
     <>
-      <div className="bg-[#070724]">
-        <div className="flex justify-center  items-center  py-16">
+      <div className="bg-[#070724] hidden sm:block md:flex md:justify-center  md:pb-4">
+        <div className="flex justify-center  items-center  py-16 md:py-4 md:w-[40%] ">
           {overView ? (
             <img
               className=" w-[250px] h-[250px]"
@@ -44,12 +44,12 @@ const Planet = () => {
             </div>
           )}
         </div>
-        <div className="flex items-center  p-8">
+        <div className="flex items-center md:items-start md:flex-col  p-12 md:p-16 md:justify-center md:w-[50%]">
           <div className="flex flex-col">
-            <h1 className="text-white font-antonio text-[48px] uppercase font-bold pb-4 mb-2">
+            <h1 className="text-white font-antonio text-[48px] md:text-[80px] tracking-wider uppercase font-bold pb-4 mb-2">
               {filteredPlanet[0].name}
             </h1>
-            <p className="text-white font-spartan text-left text-[14px] opacity-80 w-[80%] tracking-widest">
+            <p className="text-white font-spartan text-left  text-[14px] md:text-[16px] opacity-80 w-[80%] sm:w-[90%] sm:pb-4 tracking-widest">
               {overView
                 ? filteredPlanet[0].overview.content
                 : structure
@@ -64,7 +64,7 @@ const Planet = () => {
                 setStructure(false);
                 setSurface(false);
               }}
-              className={`w-[280px] h-[40px] border border-gray-600 mb-3 flex justify-center items-center cursor-pointer ${
+              className={`w-[280px] h-[40px] md:w-[350px] md:h-[48px] border border-gray-600 mb-3 flex justify-center items-center cursor-pointer ${
                 overView && selectedIndex === 0
                   ? "bg-[#419EBB]"
                   : overView && selectedIndex === 1
@@ -84,7 +84,7 @@ const Planet = () => {
                   : ""
               }`}
             >
-              <p className="text-white font-spartan tracking-widest uppercase text-[14px]">
+              <p className="text-white font-spartan tracking-widest uppercase text-[12px] md:text-[18px] font-bold">
                 {" "}
                 <span className=" opacity-75">01</span> {"   "} Overview
               </p>
@@ -95,7 +95,7 @@ const Planet = () => {
                 setStructure(true);
                 setSurface(false);
               }}
-              className={`w-[280px] h-[40px] border border-gray-600 mb-3 flex justify-center items-center cursor-pointer ${
+              className={`w-[280px] h-[40px] md:w-[350px] md:h-[48px] border border-gray-600 mb-3 flex justify-center items-center cursor-pointer ${
                 structure && selectedIndex === 0
                   ? "bg-[#419EBB]"
                   : structure && selectedIndex === 1
@@ -115,7 +115,7 @@ const Planet = () => {
                   : ""
               }`}
             >
-              <p className="text-white font-spartan tracking-widest uppercase text-[14px]">
+              <p className="text-white font-spartan tracking-widest uppercase text-[12px] md:text-[18px] font-bold">
                 {" "}
                 <span className=" opacity-75">02</span> {"   "} Internal
                 structure
@@ -127,7 +127,7 @@ const Planet = () => {
                 setStructure(false);
                 setSurface(true);
               }}
-              className={`w-[280px] h-[40px] border border-gray-600 mb-3 flex justify-center items-center cursor-pointer ${
+              className={`w-[280px] h-[40px] md:w-[350px] md:h-[48px] border border-gray-600 mb-3 flex justify-center items-center cursor-pointer ${
                 surface && selectedIndex === 0
                   ? "bg-[#419EBB]"
                   : surface && selectedIndex === 1
@@ -147,12 +147,41 @@ const Planet = () => {
                   : ""
               }`}
             >
-              <p className="text-white font-spartan tracking-widest uppercase text-[14px]">
+              <p className="text-white font-spartan tracking-widest uppercase text-[12px] md:text-[18px] font-bold">
                 {" "}
                 <span className=" opacity-75">03</span> {"   "} Surface geolgy
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      {/*  Details BOx division */}
+      <div className="sm:flex hidden sm:justify-center px-12 sm:pb-24  md:p-4  bg-[#070724]">
+        <div className="w-[164px] h-[88px] md:w-[250px] md:h-[100px] md:mr-4 border flex flex-col justify-center items-center text-[14px] uppercase">
+          <h3 className="text-white font-spartan opacity-70">Rotation time</h3>
+          <p className="text-white font-antonio text-[24px]">
+            {filteredPlanet[0].rotation}
+          </p>
+        </div>
+        <div className="w-[164px] h-[88px] md:w-[250px] md:h-[100px] md:mr-4  border flex flex-col justify-center items-center text-[14px] uppercase">
+          <h3 className="text-white font-spartan opacity-70">
+            Revolution time
+          </h3>
+          <p className="text-white font-antonio text-[24px]">
+            {filteredPlanet[0].revolution}
+          </p>
+        </div>
+        <div className="w-[164px] h-[88px] md:w-[250px] md:h-[100px] md:mr-4  border flex flex-col justify-center items-center text-[14px] uppercase">
+          <h3 className="text-white font-spartan opacity-70">Radius</h3>
+          <p className="text-white font-antonio text-[24px]">
+            {filteredPlanet[0].radius}
+          </p>
+        </div>
+        <div className="w-[164px] h-[88px] md:w-[250px] md:h-[100px] md:mr-4  border flex flex-col justify-center items-center text-[14px] uppercase">
+          <h3 className="text-white font-spartan opacity-70">Average Temp</h3>
+          <p className="text-white font-antonio text-[24px]">
+            {filteredPlanet[0].temperature}
+          </p>
         </div>
       </div>
     </>
