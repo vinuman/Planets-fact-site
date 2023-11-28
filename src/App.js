@@ -6,7 +6,7 @@ import Planet from "./Planet";
 function App() {
   return (
     <>
-      <div className="App">
+      <div className="App min-w-screen">
         <NavBar />
         <PlanetMob />
         <Planet />
